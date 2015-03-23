@@ -1,5 +1,6 @@
 package cn.android.common;
 
+import android.net.TrafficStats;
 import cn.android.common.pattern.decorator.ArmEquip;
 import cn.android.common.pattern.decorator.BlueGemDecorator;
 import cn.android.common.pattern.decorator.IEquip;
@@ -20,8 +21,9 @@ import cn.android.common.utils.LogUtil;
 
 /**
  * 功能测试类
+ * 
  * @author tq
- *
+ * 
  */
 public class TestUtil {
 
@@ -31,7 +33,8 @@ public class TestUtil {
 	public static void test() {
 		// testPatternStrategy();
 		// testPatternObserver();
-		testPatternDecorator();
+		// testPatternDecorator();
+		testTraffic();
 	}
 
 	/**
@@ -73,6 +76,9 @@ public class TestUtil {
 		subjectFor3d.setMsg("20140421的3D号码是：333");
 	}
 
+	/**
+	 * 设计模式--装饰模式
+	 */
 	public static void testPatternDecorator() {
 		// 一个镶嵌2颗红宝石，1颗蓝宝石的靴子
 		LogUtil.log(" 一个镶嵌2颗红宝石，1颗蓝宝石的靴子");
@@ -81,7 +87,7 @@ public class TestUtil {
 		LogUtil.log("攻击力  : " + equip.caculateAttack());
 		LogUtil.log("描述 :" + equip.description());
 		LogUtil.log("-------");
-		
+
 		// 一个镶嵌1颗红宝石，1颗蓝宝石的武器
 		LogUtil.log(" 一个镶嵌1颗红宝石，1颗蓝宝石,1颗黄宝石的武器");
 		equip = new RedGemDecorator(new BlueGemDecorator(
@@ -89,5 +95,9 @@ public class TestUtil {
 		LogUtil.log("攻击力  : " + equip.caculateAttack());
 		LogUtil.log("描述 :" + equip.description());
 		LogUtil.log("-------");
+	}
+
+	private static void testTraffic() {
+		LogUtil.log("getTotalRxBytes:" + TrafficStats.getTotalRxBytes() / 1000);
 	}
 }

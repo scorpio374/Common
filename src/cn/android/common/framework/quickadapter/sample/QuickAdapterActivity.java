@@ -1,4 +1,4 @@
-package cn.android.common;
+package cn.android.common.framework.quickadapter.sample;
 
 import java.util.Arrays;
 
@@ -8,19 +8,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import cn.android.common.framework.customview.CustomViewActivity;
-import cn.android.common.framework.quickadapter.sample.QuickAdapterActivity;
 
-public class MainActivity extends ListActivity {
+public class QuickAdapterActivity extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// setContentView(R.layout.activity_main);
+		// TestUtil.test();
 
 		getListView().setAdapter(
 				new ArrayAdapter<String>(this,
 						android.R.layout.simple_list_item_1, Arrays.asList(
-								"Quick Adapter","CustomView")));
+								"Simple Adapter Text", "MultiItemStyleText")));
 	}
 
 	@Override
@@ -28,11 +28,10 @@ public class MainActivity extends ListActivity {
 		Intent intent = null;
 		switch (position) {
 		case 0:
-			intent = new Intent(this, QuickAdapterActivity.class);
+			intent = new Intent(this, SimpleTestActivity.class);
 			break;
-			
 		case 1:
-			intent = new Intent(this, CustomViewActivity.class);
+			intent = new Intent(this, ChatActivity.class);
 			break;
 		}
 		if (intent != null)

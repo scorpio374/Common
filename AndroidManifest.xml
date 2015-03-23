@@ -22,6 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="cn.android.common.framework.quickadapter.sample.QuickAdapterActivity" />
+        <activity android:name="cn.android.common.framework.quickadapter.sample.SimpleTestActivity" />
+        <activity android:name="cn.android.common.framework.quickadapter.sample.ChatActivity" />
+        <activity android:name="cn.android.common.framework.customview.CustomViewActivity" />
     </application>
 
 </manifest>
