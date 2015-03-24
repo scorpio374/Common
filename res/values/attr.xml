@@ -2,6 +2,7 @@
 <resources>
 
     <attr name="titleText" format="string" />
+    <attr name="titleText1" format="string" />
     <attr name="titleTextColor" format="color" />
     <attr name="titleTextSize" format="dimension" />
 
@@ -9,6 +10,12 @@
         <attr name="titleText" />
         <attr name="titleTextColor" />
         <attr name="titleTextSize" />
+    </declare-styleable>
+    
+    <declare-styleable name="CustomText">
+        <attr name="titleText1"></attr>
+        <attr name="titleTextColor"></attr>
+        <attr name="titleTextSize"></attr>
     </declare-styleable>
 
 </resources>
