@@ -8,6 +8,9 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="16" />
 
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -26,6 +29,10 @@
         <activity android:name="cn.android.common.framework.quickadapter.sample.SimpleTestActivity" />
         <activity android:name="cn.android.common.framework.quickadapter.sample.ChatActivity" />
         <activity android:name="cn.android.common.framework.customview.CustomViewActivity" />
+        <activity android:name="cn.android.common.framework.keyEvent.ControlActivity" />
+        <activity android:name="cn.android.common.framework.keyEvent.SocketServer" />
+        <activity android:name="cn.android.common.framework.keyEvent.SocketClient" />
+        <activity android:name="cn.android.common.framework.keyEvent.KeyInjectActivity" />
     </application>
 
 </manifest>

@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import cn.android.common.framework.customview.CustomViewActivity;
+import cn.android.common.framework.keyEvent.KeyInjectActivity;
+import cn.android.common.framework.keyEvent.SocketClient;
+import cn.android.common.framework.keyEvent.SocketServer;
 import cn.android.common.framework.quickadapter.sample.QuickAdapterActivity;
 
 public class MainActivity extends ListActivity {
@@ -20,7 +23,8 @@ public class MainActivity extends ListActivity {
 		getListView().setAdapter(
 				new ArrayAdapter<String>(this,
 						android.R.layout.simple_list_item_1, Arrays.asList(
-								"Quick Adapter","CustomView")));
+								"Quick Adapter", "CustomView", "SocketServer",
+								"SocketClient", "KeyInject")));
 	}
 
 	@Override
@@ -30,9 +34,21 @@ public class MainActivity extends ListActivity {
 		case 0:
 			intent = new Intent(this, QuickAdapterActivity.class);
 			break;
-			
+
 		case 1:
 			intent = new Intent(this, CustomViewActivity.class);
+			break;
+
+		case 2:
+			intent = new Intent(this, SocketServer.class);
+			break;
+
+		case 3:
+			intent = new Intent(this, SocketClient.class);
+			break;
+
+		case 4:
+			intent = new Intent(this, KeyInjectActivity.class);
 			break;
 		}
 		if (intent != null)
